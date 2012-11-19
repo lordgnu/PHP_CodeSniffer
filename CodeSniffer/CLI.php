@@ -385,6 +385,7 @@ class PHP_CodeSniffer_CLI
                                      'svnblame',
                                      'gitblame',
                                      'hgblame',
+                                     'html'
                                     );
 
                 if (in_array($report, $validReports) === false) {
@@ -780,8 +781,8 @@ class PHP_CodeSniffer_CLI
         echo '        <generator>   The name of a doc generator to use'.PHP_EOL;
         echo '                      (forces doc generation instead of checking)'.PHP_EOL;
         echo '        <report>      Print either the "full", "xml", "checkstyle", "csv", "emacs"'.PHP_EOL;
-        echo '                      "source", "summary", "svnblame", "gitblame", "hgblame" or'.PHP_EOL;
-        echo '                      "notifysend" report'.PHP_EOL;
+        echo '                      "source", "summary", "svnblame", "gitblame", "hgblame",'.PHP_EOL;
+        echo '                      "notifysend" or "html" report'.PHP_EOL;
         echo '                      (the "full" report is printed by default)'.PHP_EOL;
         echo '        <reportfile>  Write the report to the specified file path'.PHP_EOL;
         echo '        <reportWidth> How many columns wide screen reports should be printed'.PHP_EOL;
