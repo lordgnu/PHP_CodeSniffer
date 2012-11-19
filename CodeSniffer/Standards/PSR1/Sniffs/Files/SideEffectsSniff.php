@@ -146,7 +146,9 @@ class PSR1_Sniffs_Files_SideEffectsSniff implements PHP_CodeSniffer_Sniff
                     $firstSymbol = $i;
                 }
 
-                $i = $tokens[$i]['scope_closer'];
+                if (array_key_exists('scope_closer', $tokens[$i])) {
+                    $i = $tokens[$i]['scope_closer'];
+                }
                 continue;
             } else if ($tokens[$i]['code'] === T_STRING
                 && strtolower($tokens[$i]['content']) === 'define'
